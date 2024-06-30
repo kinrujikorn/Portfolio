@@ -37,7 +37,7 @@ nav {
   color: white;
   padding: 1rem;
 }
-
+/* 
 nav ul {
   list-style: none;
   display: flex;
@@ -46,12 +46,12 @@ nav ul {
 
 nav ul li {
   margin: 0 1rem;
-}
+} */
 
 nav ul li a {
   color: white;
   text-decoration: none;
-  font-size: 22px;
+  font-size: 20px;
   font-family: sans-serif;
 }
 

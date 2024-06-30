@@ -36,27 +36,31 @@
 // export default App
 
 import React from "react";
+import Profile from "./Profile.jpg";
 
 const Home = () => {
   return (
     <>
-      <h1>Home Page</h1>
-      <br />
+      <div className="h-screen flex flex-col justify-center items-center">
+        <div className="flex items-center space-x-12">
+          <div className="w-[400px] h-[400px] rounded-full bg-gray-300 flex justify-center items-center overflow-hidden">
+            <img
+              src={Profile}
+              alt="Profile"
+              className="w-full h-full object-cover "
+            />
+          </div>
 
-      <br />
-      <h2 style={{ textAlign: "center" }} className="header">
-        Hi, I'm Kin.{" "}
-      </h2>
-      <br />
-      <p style={{ textAlign: "center" }} className="text">
-        {" "}
-        Rujikorn Rujitanont ✨
-      </p>
-      <p style={{ textAlign: "center" }} className="text">
-        Computer Engineering 💻
-      </p>
-      <br />
-      <p style={{ textAlign: "center" }} className="header">
+          {/* Adjust size and border radius as needed */}
+          <div>
+            <br />
+            <p className="text-[56px] font-bold;">Hi, I'm Kin. </p>
+            <br />
+            <p className="text-[48px] font-bold">Rujikorn Rujitanont ✨</p>
+          </div>
+        </div>
+
+        {/* <p style={{ textAlign: "center" }} className="header">
         Contact
       </p>
       <p style={{ textAlign: "center" }} className="text">
@@ -65,12 +69,12 @@ const Home = () => {
       <p style={{ textAlign: "center" }} className="text">
         rujikornkin96@gmail.com 📧
       </p>
-      <p style={{ textAlign: "center" }} className="text">
+      <p style={{ textAlign: "center" }} className="text-red">
         {" "}
         Bangkok, Thailand{" "}
-      </p>
-
-      <h1 className="italic">Hello world!</h1>
+      </p> */}
+        {/* <h1 className="text-blue-600 text-[22px] font-sans">Hello world!</h1> */}
+      </div>
     </>
   );
 };
