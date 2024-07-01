@@ -59,77 +59,96 @@ const Home = () => {
 
   return (
     <>
-      <div className="h-screen flex flex-col justify-center items-center">
-        <div className="flex items-center space-x-22">
-          <div className="w-[400px] h-[400px] rounded-full bg-gray-300 flex justify-center items-center overflow-hidden">
-            <img
-              src={Profile}
-              alt="Profile"
-              className="w-full h-full object-cover "
-            />
-          </div>
+      <div class="area">
+        <ul class="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
 
-          {/* Adjust size and border radius as needed */}
-          <div
-            className="text-container"
-            style={{ width: "600px", textAlign: "center" }}
-          >
-            <br />
-            <br />
-            <p className="text-[48px]  ">Hi, I'm Kin </p>
-            <br />
-            <p className="text-[56px] font-bold;">
-              <span className="multiple-text"></span>
-            </p>
-            <br />
-            <p align="center">
-              <a href="https://skillicons.dev">
-                <img src="https://skillicons.dev/icons?i=c,python,dart,javascript,php,html,css,react,nodejs,expressjs,flutter,flask,mysql,git&perline=7" />
-              </a>
-            </p>
-            <br />
+        <div className="h-screen flex flex-col justify-center items-center relative z-10">
+          <div className="flex items-center space-x-22">
+            <div
+              className="w-[500px] h-[500px] rounded-full bg-gray-300 flex justify-center items-center overflow-hidden shadow-2xl shadow-slate-500 
+            -300/100"
+            >
+              <img
+                src={Profile}
+                alt="Profile"
+                className="w-full h-full object-cover "
+              />
+            </div>
+            <div className="bg-white p-8 rounded-lg ml-40 shadow-2xl shadow-slate-500 ">
+              {/* Adjust size and border radius as needed */}
+              <div
+                className="text-container"
+                style={{ width: "600px", textAlign: "center" }}
+              >
+                <br />
+                <br />
+                <p className="text-[48px] text-black  ">Hi, I'm Kin </p>
+                <br />
+                <p className="text-[56px] font-bold text-black">
+                  <span className="multiple-text"></span>
+                </p>
+                <br />
+                <p align="center">
+                  <a href="https://skillicons.dev">
+                    <img src="https://skillicons.dev/icons?i=c,python,dart,javascript,php,html,css,react,nodejs,expressjs,flutter,flask,mysql,git&perline=7" />
+                  </a>
+                </p>
+                <br />
 
-            <a
-              href="https://github.com/kinrujikorn"
-              target="_blank"
-              className="hover:scale-125 h-12 w-16 inline-block"
-            >
-              <img
-                src="/images/github.png"
-                className="rounded-full p-1 w-[60px] h-[60px]"
-              ></img>
-            </a>
-            <a
-              href="https://www.facebook.com/profile.php?id=100009686763652"
-              target="_blank"
-              className="hover:scale-125 h-12 w-16 inline-block"
-            >
-              <img
-                src="/images/facebook.png"
-                className="rounded-full p-1 w-[60px] h-[60px]"
-              ></img>
-            </a>
+                <a
+                  href="https://github.com/kinrujikorn"
+                  target="_blank"
+                  className="hover:scale-125 h-12 w-16 inline-block"
+                >
+                  <img
+                    src="/images/github.png"
+                    className="rounded-full p-1 w-[60px] h-[60px]"
+                  ></img>
+                </a>
+                <a
+                  href="https://www.facebook.com/profile.php?id=100009686763652"
+                  target="_blank"
+                  className="hover:scale-125 h-12 w-16 inline-block"
+                >
+                  <img
+                    src="/images/facebook.png"
+                    className="rounded-full p-1 w-[60px] h-[60px]"
+                  ></img>
+                </a>
 
-            <a
-              href="https://www.instagram.com/kinrujikorn/"
-              target="_blank"
-              className="hover:scale-125 h-12 w-16 inline-block"
-            >
-              <img
-                src="/images/instagram.png"
-                className="rounded-full p-1 w-[60px] h-[60px]"
-              ></img>
-            </a>
-            <a
-              href="https://www.facebook.com/profile.php?id=100009686763652"
-              target="_blank"
-              className="hover:scale-125 h-12 w-16 inline-block"
-            >
-              <img
-                src="/images/facebook.png"
-                className="rounded-full p-1 w-[60px] h-[60px]"
-              ></img>
-            </a>
+                <a
+                  href="https://www.instagram.com/kinrujikorn/"
+                  target="_blank"
+                  className="hover:scale-125 h-12 w-16 inline-block"
+                >
+                  <img
+                    src="/images/instagram.png"
+                    className="rounded-full p-1 w-[60px] h-[60px]"
+                  ></img>
+                </a>
+                <a
+                  href="https://www.facebook.com/profile.php?id=100009686763652"
+                  target="_blank"
+                  className="hover:scale-125 h-12 w-16 inline-block"
+                >
+                  <img
+                    src="/images/facebook.png"
+                    className="rounded-full p-1 w-[60px] h-[60px]"
+                  ></img>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
