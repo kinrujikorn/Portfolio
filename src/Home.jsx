@@ -88,6 +88,38 @@ const Home = () => {
               </a>
             </p>
             <br />
+
+            <a
+              href="https://github.com/kinrujikorn"
+              target="_blank"
+              className="hover:scale-125 h-12 w-16 inline-block"
+            >
+              <img
+                src="/images/github.png"
+                className="rounded-full p-1 w-[60px] h-[60px]"
+              ></img>
+            </a>
+            <a
+              href="https://www.facebook.com/profile.php?id=100009686763652"
+              target="_blank"
+              className="hover:scale-125 h-12 w-16 inline-block"
+            >
+              <img
+                src="/images/facebook.png"
+                className="rounded-full p-1 w-[60px] h-[60px]"
+              ></img>
+            </a>
+
+            <a
+              href="https://www.instagram.com/kinrujikorn/"
+              target="_blank"
+              className="hover:scale-125 h-12 w-16 inline-block"
+            >
+              <img
+                src="/images/instagram.png"
+                className="rounded-full p-1 w-[60px] h-[60px]"
+              ></img>
+            </a>
             <a
               href="https://www.facebook.com/profile.php?id=100009686763652"
               target="_blank"
