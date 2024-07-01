@@ -35,14 +35,32 @@
 
 // export default App
 
-import React from "react";
+import React, { useEffect } from "react";
 import Profile from "./Profile.jpg";
+import Typed from "typed.js";
 
 const Home = () => {
+  useEffect(() => {
+    const typed = new Typed(".multiple-text", {
+      strings: [
+        "Frontend Developer",
+        "Backend Developer",
+        "Sofeware Engineering",
+      ],
+      typeSpeed: 70,
+      backSpeed: 70,
+      backDelay: 1000,
+      loop: true,
+    });
+    return () => {
+      typed.destroy(); // Destroy instance on unmounting to prevent memory leaks
+    };
+  }, []);
+
   return (
     <>
       <div className="h-screen flex flex-col justify-center items-center">
-        <div className="flex items-center space-x-12">
+        <div className="flex items-center space-x-22">
           <div className="w-[400px] h-[400px] rounded-full bg-gray-300 flex justify-center items-center overflow-hidden">
             <img
               src={Profile}
@@ -52,28 +70,36 @@ const Home = () => {
           </div>
 
           {/* Adjust size and border radius as needed */}
-          <div>
+          <div
+            className="text-container"
+            style={{ width: "600px", textAlign: "center" }}
+          >
             <br />
-            <p className="text-[56px] font-bold;">Hi, I'm Kin. </p>
             <br />
-            <p className="text-[48px] font-bold">Rujikorn Rujitanont ✨</p>
+            <p className="text-[48px]  ">Hi, I'm Kin </p>
+            <br />
+            <p className="text-[56px] font-bold;">
+              <span className="multiple-text"></span>
+            </p>
+            <br />
+            <p align="center">
+              <a href="https://skillicons.dev">
+                <img src="https://skillicons.dev/icons?i=c,python,dart,javascript,php,html,css,react,nodejs,expressjs,flutter,flask,mysql,git&perline=7" />
+              </a>
+            </p>
+            <br />
+            <a
+              href="https://www.facebook.com/profile.php?id=100009686763652"
+              target="_blank"
+              className="hover:scale-125 h-12 w-16 inline-block"
+            >
+              <img
+                src="/images/facebook.png"
+                className="rounded-full p-1 w-[60px] h-[60px]"
+              ></img>
+            </a>
           </div>
         </div>
-
-        {/* <p style={{ textAlign: "center" }} className="header">
-        Contact
-      </p>
-      <p style={{ textAlign: "center" }} className="text">
-        098-936-9396 ☎️
-      </p>
-      <p style={{ textAlign: "center" }} className="text">
-        rujikornkin96@gmail.com 📧
-      </p>
-      <p style={{ textAlign: "center" }} className="text-red">
-        {" "}
-        Bangkok, Thailand{" "}
-      </p> */}
-        {/* <h1 className="text-blue-600 text-[22px] font-sans">Hello world!</h1> */}
       </div>
     </>
   );
