@@ -116,17 +116,22 @@ const Home = () => {
             <a
               href="https://www.linkedin.com/in/rujikorn-rujitanont-b514a0297/"
               target="_blank"
-              className="text-[18px] mr-8 hover:scale-125 p-4 px-10 inline-block text-black rounded-xl bg-white font-bold shadow-2xl shadow-slate-500"
+              className="text-[18px] mr-8 transition transform hover:scale-110 p-4 px-10 inline-block text-black rounded-xl bg-white font-bold shadow-2xl shadow-slate-500"
             >
               HIRE ME! / CONTACT
             </a>
+
             <a
               href="/images/resume.pdf"
               download="Rujikorn_Rujitanont_Resume.pdf"
               target="_blank"
-              className=" text-[18px] mr-72 hover:scale-125 p-4 px-10 inline-block text-black rounded-xl bg-white font-bold shadow-2xl shadow-slate-500"
+              className=" flex item-center text-[18px] mr-72 transition transform hover:scale-110 p-4 px-10  text-black rounded-xl bg-white font-bold shadow-2xl shadow-slate-500"
             >
               RESUME
+              <img
+                src="/images/download.png"
+                className="p-1 ml-1 mt-1 w-[20px] h-[20px]"
+              />
             </a>
           </div>
           <br />
