@@ -24,11 +24,7 @@ const Navbar = () => {
               About
             </Link>
           </li>
-          <li className="mr-8">
-            <Link to="/Portfolio" className="text-black  text-xl">
-              Portfolio
-            </Link>
-          </li>
+
           <li className="mr-8">
             <Link to="/Contact" className="text-black  text-xl">
               Contact
