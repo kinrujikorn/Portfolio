@@ -152,7 +152,7 @@ const Home = () => {
           </FadeInSection>
 
           <div className="w-[1650px] h-[1400px] self-start bg-white p-8 rounded-lg mt-20 ml-24 px-16  shadow-2xl shadow-slate-500 md:translate-x-6 ">
-            <div className="bg-gray-950 p-8 rounded-lg shadow-lg shadow-slate-500 inline-block ">
+            <div className="bg-slate-900 p-8 rounded-lg shadow-lg shadow-slate-500 inline-block ">
               <h1 className="text-[52px] text-white font-bold">MY PROJECT</h1>
             </div>
 
