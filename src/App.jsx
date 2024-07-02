@@ -1,11 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./Navbar";
-import Home from "./Home"; // Ensure this imports the default export
-import About from "./About"; // Ensure this imports the default export
-import Portfolio from "./Portfolio"; // Ensure this imports the default export
-import Contact from "./Contact"; // Ensure this imports the default export
+import Home from "./Home";
+import About from "./About";
+import Portfolio from "./Portfolio";
+import Contact from "./Contact";
 import "./App.css";
+
 const App = () => {
   return (
     <Router>

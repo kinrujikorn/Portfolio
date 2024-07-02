@@ -1,23 +1,36 @@
-import React, { useEffect, useState } from "react";
-import "./App.css"; // Import your CSS file where animations are defined
-function FadeInSection(props) {
-  const [isVisible, setVisible] = React.useState(true);
-  const domRef = React.useRef();
-  React.useEffect(() => {
+import React, { useRef, useEffect, useState } from "react";
+
+const FadeInSection = ({ children }) => {
+  const domRef = useRef();
+  const [isVisible, setVisible] = useState(false);
+
+  useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => setVisible(entry.isIntersecting));
+      entries.forEach((entry) => {
+        setVisible(entry.isIntersecting);
+      });
     });
-    observer.observe(domRef.current);
-    return () => observer.unobserve(domRef.current);
+
+    const currentElement = domRef.current;
+    if (currentElement) {
+      observer.observe(currentElement);
+    }
+
+    return () => {
+      if (currentElement) {
+        observer.unobserve(currentElement);
+      }
+    };
   }, []);
+
   return (
     <div
-      className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
       ref={domRef}
+      className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
     >
-      {props.children}
+      {children}
     </div>
   );
-}
+};
 
 export default FadeInSection;
