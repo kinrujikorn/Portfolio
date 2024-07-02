@@ -9,7 +9,7 @@ import Navbar from "./Navbar"; // Make sure to import the Navbar component
 const Home = () => {
   useEffect(() => {
     const typed = new Typed(".multiple-text", {
-      strings: ["Frontend Developer", "Backend Developer", "Software Engineer"],
+      strings: ["Full Stack Developer", "Software Engineer"],
       typeSpeed: 70,
       backSpeed: 70,
       backDelay: 1000,
@@ -24,6 +24,11 @@ const Home = () => {
     <>
       <div className="area flex flex-col justify-start min-h-screen pt-16">
         <ul className="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
           <li></li>
           <li></li>
           <li></li>
@@ -107,11 +112,30 @@ const Home = () => {
               </div>
             </div>
           </div>
+          <div className="flex self-end">
+            <a
+              href="https://www.linkedin.com/in/rujikorn-rujitanont-b514a0297/"
+              target="_blank"
+              className="text-[18px] mr-8 hover:scale-125 p-4 px-10 inline-block text-black rounded-xl bg-white font-bold shadow-2xl shadow-slate-500"
+            >
+              HIRE ME! / CONTACT
+            </a>
+            <a
+              href="/images/resume.pdf"
+              download="Rujikorn_Rujitanont_Resume.pdf"
+              target="_blank"
+              className=" text-[18px] mr-72 hover:scale-125 p-4 px-10 inline-block text-black rounded-xl bg-white font-bold shadow-2xl shadow-slate-500"
+            >
+              RESUME
+            </a>
+          </div>
           <br />
           <FadeInSection>
             <div className="bg-white p-8 rounded-lg mt-30 shadow-2xl shadow-slate-500 md:translate-x-6 transition transform hover:scale-110">
               <div className="slide-up">
-                <h1 className="text-[30px] text-black font-bold">My Skill</h1>
+                <h1 className="text-[30px] text-black font-bold mb-4">
+                  MY SKILL
+                </h1>
                 <p align="center">
                   <a href="https://skillicons.dev">
                     <img src="https://skillicons.dev/icons?i=c,python,dart,javascript,php,html,css,react,nodejs,expressjs,flutter,flask,mysql,git&perline=7" />
@@ -122,12 +146,12 @@ const Home = () => {
             </div>
           </FadeInSection>
 
-          <div className="w-[1650px] h-[1000px] self-start bg-white p-8 rounded-lg mt-20 ml-24 px-16  shadow-2xl shadow-slate-500 md:translate-x-6 ">
-            <h1 className="text-[64px] text-black font-bold mb-14">
-              MY PROJECT
-            </h1>
+          <div className="w-[1650px] h-[1400px] self-start bg-white p-8 rounded-lg mt-20 ml-24 px-16  shadow-2xl shadow-slate-500 md:translate-x-6 ">
+            <div className="bg-gray-950 p-8 rounded-lg shadow-lg shadow-slate-500 inline-block ">
+              <h1 className="text-[52px] text-white font-bold">MY PROJECT</h1>
+            </div>
 
-            <div id="wanjaii" className="flex items-center  space-x-22 mt-10">
+            <div id="wanjaii" className="flex items-center  space-x-22 mt-20">
               <FadeInSection>
                 <img
                   src="/images/wanjaii.png"
@@ -135,19 +159,14 @@ const Home = () => {
                 ></img>
               </FadeInSection>
               <div className="self-start w-[700px] h-[300px]">
-                <p className="ml-8 mb-6 font-bold text-[36px] text-left">
-                  Wanjaii Project
-                </p>
-                <p className="ml-14 pb-8 font text-[22px] text-left">
-                  We develop dating apps that include a chat system for
-                  communication and a search system for finding people. We use
-                  Flutter for development and MySQL for the database.
-                </p>
                 <div className="flex">
+                  <p className="ml-8 mb-6 font-bold text-[36px] text-left">
+                    Wanjaii Project
+                  </p>
                   <a
                     href="https://github.com/kinrujikorn/wanjaii"
                     target="_blank"
-                    className="hover:scale-125 h-12 w-16 inline-block ml-14 "
+                    className="hover:scale-125 h-12 w-16 inline-block ml-6 "
                   >
                     <img
                       src="/images/github.png"
@@ -166,15 +185,15 @@ const Home = () => {
                   </a>
                 </div>
 
-                {/* <a
-                  href="https://youtu.be/wxxlVmyokk8"
-                  class="inline-block px-4 py-2 ml-4 bg-gray-400 text-white font-medium rounded-lg shadow-md hover:bg-gray-700 hover:shadow-lg"
-                >
-                  Demo: https://youtu.be/wxxlVmyokk8
-                </a> */}
+                <p className="ml-14 pb-8 font text-[22px] text-left">
+                  We develop dating apps that include a chat system for
+                  communication and a search system for finding people. We use
+                  Flutter for development and MySQL for the database.
+                </p>
               </div>
             </div>
-            <div id="servicex" className="flex items-center  space-x-22 mt-10">
+
+            <div id="servicex" className="flex items-center  space-x-22 mt-20">
               <FadeInSection>
                 <img
                   src="/images/servicex.png"
@@ -182,9 +201,22 @@ const Home = () => {
                 ></img>
               </FadeInSection>
               <div className="self-start w-[700px] h-[300px]">
-                <p className="ml-8 mb-6 font-bold text-[36px] text-left ">
-                  ServiceX Project
-                </p>
+                <div className="flex">
+                  <p className="ml-8 mb-6 font-bold text-[36px] text-left ">
+                    ServiceX Project
+                  </p>
+                  <a
+                    href="https://github.com/kinrujikorn/ServiceX"
+                    target="_blank"
+                    className="hover:scale-125 h-12 w-16 inline-block ml-6 "
+                  >
+                    <img
+                      src="/images/github.png"
+                      className="rounded-full p-1 w-[60px] h-[60px]  "
+                    ></img>
+                  </a>
+                </div>
+
                 <p className="ml-14 pb-8 font text-[22px] text-left">
                   In this project, we are developing an app similar to a
                   Technician Queue. It is an application that facilitates the
@@ -193,6 +225,51 @@ const Home = () => {
                   Node.js with Express.js for the backend, utilizing MySQL as
                   the database to store data.
                 </p>
+
+                {/* <a
+                  href="https://youtu.be/wxxlVmyokk8"
+                  className=" font-medium text-blue-600 hover:underline text-[20px]"
+                >
+                  Demo: https://youtu.be/wxxlVmyokk8
+                </a> */}
+              </div>
+            </div>
+            <div
+              id="hotelmanagement"
+              className="flex items-center  space-x-22 mt-20"
+            >
+              <FadeInSection>
+                <img
+                  src="/images/hotelmanagement.png"
+                  className=" ml-12 rounded-lg p-1 w-[600px] h-[300px]"
+                ></img>
+              </FadeInSection>
+              <div className="self-start w-[700px] h-[300px]">
+                <div className="flex">
+                  <p className="ml-8 mb-6 font-bold text-[36px] text-left ">
+                    Hotel Management Project
+                  </p>
+                  <a
+                    href="https://github.com/kinrujikorn/The-Saturn-Hotel-Management"
+                    target="_blank"
+                    className="hover:scale-125 h-12 w-16 inline-block ml-6 "
+                  >
+                    <img
+                      src="/images/github.png"
+                      className="rounded-full p-1 w-[60px] h-[60px]  "
+                    ></img>
+                  </a>
+                </div>
+
+                <p className="ml-14 pb-8 font text-[22px] text-left">
+                  We are creating a website for a hotel management system that
+                  includes features like hotel room reservations, financial
+                  tracking, and various data entry systems for hotel-related
+                  information. To build this, we are using HTML, CSS, and
+                  JavaScript for the user interface, and PHP and MySQL for the
+                  backend to handle data and process
+                </p>
+
                 {/* <a
                   href="https://youtu.be/wxxlVmyokk8"
                   className=" font-medium text-blue-600 hover:underline text-[20px]"
@@ -203,6 +280,53 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="flex justify-center mt-4 mb-8">
+        <br />
+        <p className="text-[16px]  mt-4 mr-8">kinrujikorn</p>
+        <a
+          href="https://github.com/kinrujikorn"
+          target="_blank"
+          className="hover:scale-125 h-12 w-16 inline-block"
+        >
+          <img
+            src="/images/github.png"
+            className="rounded-full p-1 w-[60px] h-[60px]"
+          ></img>
+        </a>
+        <a
+          href="https://www.facebook.com/profile.php?id=100009686763652"
+          target="_blank"
+          className="hover:scale-125 h-12 w-16 inline-block"
+        >
+          <img
+            src="/images/facebook.png"
+            className="rounded-full p-1 w-[60px] h-[60px]"
+          ></img>
+        </a>
+
+        <a
+          href="https://www.instagram.com/kinrujikorn/"
+          target="_blank"
+          className="hover:scale-125 h-12 w-16 inline-block"
+        >
+          <img
+            src="/images/instagram.png"
+            className="rounded-full p-1 w-[60px] h-[60px]"
+          ></img>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/rujikorn-rujitanont-b514a0297/"
+          target="_blank"
+          className="hover:scale-125 h-12 w-16 inline-block"
+        >
+          <img
+            src="/images/linkedin.png"
+            className="rounded-full p-1 w-[60px] h-[60px]"
+          ></img>
+        </a>
+
+        <p className="text-[16px]  mt-4 ml-8">All right reserved.</p>
       </div>
     </>
   );
