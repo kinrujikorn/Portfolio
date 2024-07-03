@@ -1,6 +1,8 @@
 // export default Navbar;
+
+// import { Link } from "react-router-dom";
+
 import React from "react";
-import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -8,27 +10,26 @@ const Navbar = () => {
       <div className="flex justify-between">
         <ul className="flex">
           <li className="ml-8 font-medium">
-            <Link to="/" className="text-black font-bold text-3xl">
+            <a href="#home" className="text-black font-bold text-3xl">
               Portfolio
-            </Link>
+            </a>
           </li>
         </ul>
         <ul className="flex">
           <li className="mr-8">
-            <Link to="/" className="text-black  text-xl">
+            <a href="#home" className="text-black text-xl">
               Home
-            </Link>
+            </a>
           </li>
           <li className="mr-8">
-            <Link to="/About" className="text-black  text-xl">
+            <a href="#about" className="text-black text-xl">
               About
-            </Link>
+            </a>
           </li>
-
           <li className="mr-8">
-            <Link to="/Contact" className="text-black  text-xl">
+            <a href="#contact" className="text-black text-xl">
               Contact
-            </Link>
+            </a>
           </li>
         </ul>
       </div>
