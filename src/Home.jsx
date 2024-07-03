@@ -305,7 +305,7 @@ const Home = () => {
                 </p>
                 <div className="mt-8 slide-up w-[250px] h-[250px] rounded-full bg-gray-300 flex overflow-hidden shadow-2xl shadow-slate-500">
                   <img
-                    src="public/Contact-Profile.jpg"
+                    src="images/Contact-Profile.jpg"
                     className="w-full h-full object-cover"
                   />
                 </div>
