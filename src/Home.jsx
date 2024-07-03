@@ -37,11 +37,8 @@ const Home = () => {
           <li></li>
           <li></li>
           <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
         </ul>
-        <section id="home">
+        <section id="home" className="py-10 md:py-10">
           <div className=" flex flex-col  items-center relative z-10 overflow">
             <div className="flex items-center space-x-22 mt-10">
               <FadeInSection>
@@ -137,10 +134,10 @@ const Home = () => {
             </div>
             <br />
             <FadeInSection>
-              <div className="bg-white p-8 rounded-lg mt-30 shadow-2xl shadow-slate-500 md:translate-x-6 transition transform hover:scale-110">
+              <div className="bg-white p-6 rounded-lg mt-30 shadow-2xl shadow-slate-500 md:translate-x-6 transition transform hover:scale-110">
                 <div className="slide-up">
                   <h1 className="text-[30px] text-black font-bold mb-4">
-                    MY SKILL
+                    My Skill
                   </h1>
                   <p align="center">
                     <a href="https://skillicons.dev">
@@ -152,9 +149,9 @@ const Home = () => {
               </div>
             </FadeInSection>
 
-            <div className="w-[1650px] h-[1400px] self-start bg-white bg-opacity-98 p-8 rounded-lg mt-40 ml-24 px-16  shadow-2xl shadow-slate-500 md:translate-x-6 ">
+            <div className="w-[1650px] h-[1400px] self-center bg-white bg-opacity-98 p-8 rounded-lg mt-40   shadow-2xl shadow-slate-500  ">
               <div className="bg-slate-900 p-8 rounded-lg shadow-lg opacity-90 shadow-slate-500 inline-block ">
-                <h1 className="text-[42px] text-white font-bold">MY PROJECT</h1>
+                <h1 className="text-[42px] text-white font-bold">My Project</h1>
               </div>
 
               <div id="wanjaii" className="flex items-center  space-x-22 mt-20">
@@ -294,16 +291,17 @@ const Home = () => {
         {/* <div>
             <br />
           </div> */}
-        <div className="grid md:grid-cols-2 my-12 mx-72">
+        <div className="grid md:grid-cols-2 mt-8 mb-14 mx-72 mb-22">
           <section id="contact">
             <div className=" flex  flex-row justify-center relative z-10 overflow ">
-              <div className="flex flex-col items-center pt-12 ">
+              <div className="flex flex-col items-center  ">
                 <h1 className="text-[36px] text-white font-bold rounded-lg ">
                   Contact Me
                 </h1>
                 <p className="flex text-start text-white mt-4">
                   Email: rujikornkin96@gmail.com <br />
-                  Phone: 098-936-9396
+                  Phone: 098-936-9396 <br />
+                  Bangkok, Thailand
                 </p>
                 <div className="mt-8 slide-up w-[250px] h-[250px] rounded-full bg-gray-300 flex overflow-hidden shadow-2xl shadow-slate-500">
                   <img
@@ -315,7 +313,7 @@ const Home = () => {
             </div>
           </section>
           <section id="about">
-            <div className="pt-24 pr-24">
+            <div className="pt-12 pr-24">
               <h1 className="text-white  text-[22px] font-bold ">About Me</h1>
               <div>
                 <p className="text-start pt-4 text-white  ">
@@ -380,7 +378,7 @@ const Home = () => {
       </div>
       <footer>
         {/* Bottom Bar Part */}
-        <div className="flex justify-center mt-4 mb-8">
+        <div className="flex justify-center mt-4 mb-4">
           <br />
           <p className="text-[16px]  mt-4 mr-8">kinrujikorn</p>
           <a

@@ -10,7 +10,7 @@ const Navbar = () => {
       <div className="flex justify-between">
         <ul className="flex">
           <li className="ml-8 font-medium">
-            <a href="#home" className="text-black font-bold text-3xl">
+            <a href="/" className="text-black font-bold text-3xl">
               Portfolio
             </a>
           </li>
