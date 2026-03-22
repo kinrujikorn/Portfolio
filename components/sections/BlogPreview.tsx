@@ -9,13 +9,15 @@ export default function BlogPreview() {
   if (posts.length === 0) return null;
 
   return (
-    <section id="blog" className="py-20 px-6">
+    <section id="blog" className="py-24 px-6">
       <div className="max-w-4xl mx-auto">
         <SectionReveal>
-          <h2 className="font-mono text-3xl font-semibold text-text-primary text-center mb-2">
-            <span className="text-primary">&gt;_</span> blog
+          <h2 className="text-4xl md:text-5xl font-bold text-text-primary text-center mb-2 tracking-tight">
+            <span className="text-gradient">Blog</span>
           </h2>
-          <div className="w-16 h-1 bg-primary mx-auto mb-12 rounded-full" />
+          <p className="font-mono text-sm text-text-secondary text-center mb-16">
+            Thoughts and learnings
+          </p>
         </SectionReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
