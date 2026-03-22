@@ -14,9 +14,9 @@ Redesign the existing React+Vite portfolio into a new Next.js project with an AI
 |-----------|---------|
 | Next.js 15 (App Router) | Framework, SSR/SSG |
 | TypeScript | Type safety |
-| Tailwind CSS 4 | Styling |
+| Tailwind CSS 3.4 | Styling |
 | Framer Motion | Scroll reveals, hover effects, staggered animations |
-| tsparticles | Neural network particle background |
+| @tsparticles/react + @tsparticles/slim | Neural network particle background |
 | Typed.js | Hero typing animation |
 | Inter (next/font/google) | Typography |
 
@@ -101,8 +101,8 @@ portfolio-next/
 - Name "Kin" - large bold text, fades in first
 - TypedText below: cycles "Full Stack Developer" / "Software Engineer" with blue cursor
 - Social icons row: GitHub, Facebook, Instagram, LinkedIn - white, glow blue on hover
-- Two CTA buttons: "Hire Me" (filled blue) and "Resume" (outlined blue), both with hover glow
-- Animated scroll-down chevron at bottom
+- Two CTA buttons: "Hire Me" (filled blue, links to LinkedIn profile) and "Resume" (outlined blue, downloads `resume.pdf`), both with hover glow
+- Animated scroll-down chevron at bottom (scrolls to Skills section)
 
 ### Skills Section
 - Heading "My Skills" with blue underline accent
@@ -157,19 +157,21 @@ portfolio-next/
 
 ## Assets
 
-All images copied from the existing project's `public/images/` directory:
-- Contact-Profile.jpg, Profile.jpg
-- wanjaii.png, servicex.png, hotelmanagement.png
-- github.png, facebook.png, instagram.png, linkedin.png
-- email.png, download.png, demo.png
-- resume.pdf
+Images copied from the existing project:
+- `src/Profile.jpg` → `public/images/Profile.jpg` (hero profile image, note: original lives in `src/`, not `public/`)
+- `public/images/Contact-Profile.jpg` (contact section profile image)
+- `public/images/wanjaii.png`, `servicex.png`, `hotelmanagement.png` (project screenshots)
+- `public/images/github.png`, `facebook.png`, `instagram.png`, `linkedin.png` (social icons)
+- `public/images/email.png`, `download.png`, `demo.png` (UI icons)
+- `public/images/resume.pdf` → `public/resume.pdf` (resume download)
 
 ## Data Architecture
 
-Content extracted from hardcoded JSX into typed data files:
+Content extracted from hardcoded JSX into typed data files.
+
+### data/projects.ts
 
 ```typescript
-// data/projects.ts
 interface Project {
   id: string;
   title: string;
@@ -180,13 +182,48 @@ interface Project {
   demoUrl?: string;
 }
 
-// data/skills.ts
-interface Skill {
-  name: string;
-  icon: string; // skillicons.dev identifier
-}
+export const projects: Project[] = [
+  {
+    id: "wanjaii",
+    title: "Wanjaii Project",
+    description: "We develop dating apps that include a chat system for communication and a search system for finding people. We use Flutter for development and MySQL for the database.",
+    techStack: ["Flutter", "MySQL"],
+    image: "/images/wanjaii.png",
+    githubUrl: "https://github.com/kinrujikorn/wanjaii",
+    demoUrl: "https://youtu.be/wxxlVmyokk8",
+  },
+  {
+    id: "servicex",
+    title: "ServiceX Project",
+    description: "In this project, we are developing an app similar to a Technician Queue. It is an application that facilitates the process of finding technicians or the agency we need. We use React Native as the main language for the front end and Node.js with Express.js for the backend, utilizing MySQL as the database to store data.",
+    techStack: ["React Native", "Node.js", "Express.js", "MySQL"],
+    image: "/images/servicex.png",
+    githubUrl: "https://github.com/kinrujikorn/ServiceX",
+  },
+  {
+    id: "hotelmanagement",
+    title: "Hotel Management Project",
+    description: "We are creating a website for a hotel management system that includes features like hotel room reservations, financial tracking, and various data entry systems for hotel-related information. To build this, we are using HTML, CSS, and JavaScript for the user interface, and PHP and MySQL for the backend to handle data and process.",
+    techStack: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+    image: "/images/hotelmanagement.png",
+    githubUrl: "https://github.com/kinrujikorn/The-Saturn-Hotel-Management",
+  },
+];
+```
 
-// data/social.ts
+### data/skills.ts
+
+```typescript
+export const skills = [
+  "c", "python", "dart", "javascript", "php", "html", "css",
+  "react", "nodejs", "expressjs", "flutter", "flask", "mysql", "git",
+];
+// Rendered via: https://skillicons.dev/icons?i={skills.join(",")}&perline=7
+```
+
+### data/social.ts
+
+```typescript
 interface SocialLink {
   platform: string;
   url: string;
@@ -198,9 +235,79 @@ interface ContactInfo {
   phone: string;
   location: string;
 }
+
+export const socialLinks: SocialLink[] = [
+  { platform: "GitHub", url: "https://github.com/kinrujikorn", icon: "/images/github.png" },
+  { platform: "Facebook", url: "https://www.facebook.com/profile.php?id=100009686763652", icon: "/images/facebook.png" },
+  { platform: "Instagram", url: "https://www.instagram.com/kinrujikorn/", icon: "/images/instagram.png" },
+  { platform: "LinkedIn", url: "https://www.linkedin.com/in/rujikorn-rujitanont-b514a0297/", icon: "/images/linkedin.png" },
+];
+
+export const contactInfo: ContactInfo = {
+  email: "rujikornkin96@gmail.com",
+  phone: "098-936-9396",
+  location: "Bangkok, Thailand",
+};
 ```
 
+### Typed.js Configuration
+
+```typescript
+{
+  strings: ["Full Stack Developer", "Software Engineer"],
+  typeSpeed: 70,
+  backSpeed: 70,
+  backDelay: 1000,
+  loop: true,
+}
+```
+
+## Tailwind Theme Configuration
+
+Register the custom color tokens as Tailwind theme extensions in `tailwind.config.ts`:
+
+```typescript
+// tailwind.config.ts
+export default {
+  content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
+  theme: {
+    extend: {
+      colors: {
+        background: "#0a0a0f",
+        "primary-blue": "#00a2ff",
+        "secondary-blue": "#0066cc",
+        "glow-blue": "#00a2ff33",
+        "card-bg": "#111827",
+        "card-border": "#1e293b",
+      },
+      fontFamily: {
+        sans: ["var(--font-inter)", "sans-serif"],
+      },
+    },
+  },
+  plugins: [],
+};
+```
+
+## Responsive Breakpoints
+
+Follow Tailwind's default breakpoints:
+- `sm` (640px): Stack to single column
+- `md` (768px): 2-column layouts
+- `lg` (1024px): Full desktop layout, 3-column project grid
+- Particle count: 80 on desktop, 30 on mobile (< 768px)
+
+## SEO Metadata
+
+Defined in `layout.tsx`:
+- **Title:** "Kin | Full Stack Developer"
+- **Description:** "Portfolio of Rujikorn Rujitanont (Kin) - Full Stack Developer & Software Engineer"
+- **Open Graph:** title, description, profile image
+- **Favicon:** use existing vite.svg or replace with custom
+
 ## Client vs Server Components
+
+Section components (`About.tsx`, `Contact.tsx`, `Skills.tsx`, `Projects.tsx`) are Server Components that render static content. They wrap their content in the `<SectionReveal>` client component for animation. Only components that need browser APIs or Framer Motion hooks directly are Client Components.
 
 | Component | Rendering | Reason |
 |-----------|-----------|--------|
@@ -208,11 +315,11 @@ interface ContactInfo {
 | page.tsx | Server | Assembles sections |
 | Navbar.tsx | Client | Scroll detection (IntersectionObserver) |
 | Footer.tsx | Server | Static content |
-| Hero.tsx | Client | Typed.js, Framer Motion |
-| Skills.tsx | Client | Framer Motion animations |
-| Projects.tsx | Client | Framer Motion animations |
-| About.tsx | Client | Framer Motion animations |
-| Contact.tsx | Client | Framer Motion animations |
+| Hero.tsx | Client | Typed.js, Framer Motion, particle integration |
+| Skills.tsx | Server | Static content, wrapped in SectionReveal |
+| Projects.tsx | Server | Static content, wrapped in SectionReveal |
+| About.tsx | Server | Static content, wrapped in SectionReveal |
+| Contact.tsx | Server | Static content, wrapped in SectionReveal |
 | ParticleBackground.tsx | Client | tsparticles (canvas/DOM) |
 | TypedText.tsx | Client | Typed.js (DOM manipulation) |
 | GlowCard.tsx | Client | Framer Motion hover effects |
