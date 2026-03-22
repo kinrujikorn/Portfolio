@@ -125,16 +125,17 @@ portfolio-next/
 
 ### About Section
 - Heading "About Me" with blue underline
-- Two-column layout: profile image + bio text
+- Two-column layout: `Contact-Profile.jpg` (circular, with blue glow border) on left + bio text on right
 - Bio: Rujikorn Rujitanont (Kin), 21 years old, 3rd year KMUTT Computer Engineering International Program
 - Interests: learning, gaming, video making, app/website development
 - Wrapped in a GlowCard
+- Note: The original site places the profile image in the Contact section. In the redesign, it moves to the About section for a cleaner layout. The Contact section becomes text-only.
 
 ### Contact Section
 - Heading "Contact" with blue underline
 - Three info items in a row: Email, Phone, Location
 - Icons styled in blue, text in white/slate
-- Clean and minimal layout
+- Clean and minimal layout, no profile image (moved to About section)
 
 ### Footer
 - Slim dark footer
@@ -163,7 +164,7 @@ Images copied from the existing project:
 - `public/images/wanjaii.png`, `servicex.png`, `hotelmanagement.png` (project screenshots)
 - `public/images/github.png`, `facebook.png`, `instagram.png`, `linkedin.png` (social icons)
 - `public/images/email.png`, `download.png`, `demo.png` (UI icons)
-- `public/images/resume.pdf` → `public/resume.pdf` (resume download)
+- Copy existing `public/images/resume.pdf` to new project's `public/resume.pdf` (served at `/resume.pdf`)
 
 ## Data Architecture
 
