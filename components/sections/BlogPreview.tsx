@@ -20,10 +20,10 @@ export default function BlogPreview() {
           </p>
         </SectionReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="space-y-4">
           {posts.map((post, index) => (
             <SectionReveal key={post.slug} delay={index * 0.1}>
-              <BlogCard post={post} />
+              <BlogCard post={post} index={index} />
             </SectionReveal>
           ))}
         </div>

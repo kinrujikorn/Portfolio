@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import SectionReveal from "@/components/ui/SectionReveal";
-import GlowCard from "@/components/ui/GlowCard";
 import ProjectModal from "@/components/ui/ProjectModal";
 import { projects, Project } from "@/data/projects";
 
@@ -23,39 +23,49 @@ export default function Projects() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <SectionReveal key={project.slug} delay={index * 0.1}>
-              <GlowCard
-                className="flex flex-col h-full"
+              <motion.div
+                whileHover={{ y: -6 }}
+                transition={{ duration: 0.3 }}
                 onClick={() => setSelectedProject(project)}
+                className="group cursor-pointer bg-surface/60 border border-surface-border rounded-xl overflow-hidden hover:border-primary/40 transition-all duration-300"
               >
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  width={600}
-                  height={300}
-                  className="w-full h-48 object-cover rounded-lg mb-4"
-                />
-                <h3 className="font-mono text-xl font-bold text-text-primary mb-2">
-                  {project.title}
-                </h3>
-                <p className="text-text-secondary text-sm mb-4 flex-grow">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.techStack.map((tech) => (
-                    <span
-                      key={tech}
-                      className="text-xs px-3 py-1 bg-primary/10 border border-primary/30 text-primary-light rounded-full"
-                    >
-                      {tech}
+                {/* Image with zoom effect */}
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    width={600}
+                    height={300}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  {/* Overlay on hover */}
+                  <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300 flex items-center justify-center">
+                    <span className="font-mono text-sm text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-background/80 px-4 py-2 rounded-lg backdrop-blur-sm">
+                      View Details &rarr;
                     </span>
-                  ))}
+                  </div>
                 </div>
-                <div className="flex gap-3">
-                  <span className="font-mono text-xs text-text-secondary">
-                    Click for details &rarr;
-                  </span>
+
+                {/* Content */}
+                <div className="p-6">
+                  <h3 className="text-lg font-bold text-text-primary mb-2 tracking-tight">
+                    {project.title}
+                  </h3>
+                  <p className="text-text-secondary text-sm mb-4 leading-relaxed line-clamp-2">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {project.techStack.map((tech) => (
+                      <span
+                        key={tech}
+                        className="text-[11px] font-mono px-2.5 py-1 bg-primary/5 border border-primary/20 text-primary-light rounded-md"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </GlowCard>
+              </motion.div>
             </SectionReveal>
           ))}
         </div>

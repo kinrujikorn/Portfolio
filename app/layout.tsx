@@ -4,6 +4,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ThemeProvider from "@/components/ui/ThemeProvider";
 import BackToTop from "@/components/ui/BackToTop";
+import ScrollProgress from "@/components/ui/ScrollProgress";
 import "./globals.css";
 
 const syne = Syne({
@@ -47,6 +48,7 @@ export default function RootLayout({
     <html lang="en" className={`${syne.variable} ${ibmPlexMono.variable}`}>
       <body className="font-sans antialiased">
         <ThemeProvider>
+          <ScrollProgress />
           <Navbar />
           <main>{children}</main>
           <Footer />
