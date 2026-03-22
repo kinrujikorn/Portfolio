@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { BlogPost } from "@/lib/blog";
 
 interface BlogCardProps {
@@ -6,7 +7,7 @@ interface BlogCardProps {
 
 export default function BlogCard({ post }: BlogCardProps) {
   return (
-    <a
+    <Link
       href={`/blog/${post.slug}`}
       className="block bg-surface/80 border border-surface-border rounded-xl p-6 hover:border-primary/50 hover:shadow-[0_0_20px_rgba(139,92,246,0.1)] transition-all"
     >
@@ -27,6 +28,6 @@ export default function BlogCard({ post }: BlogCardProps) {
           </span>
         ))}
       </div>
-    </a>
+    </Link>
   );
 }

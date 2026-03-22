@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navItems = [
   { label: "Home", href: "/#home" },
@@ -53,12 +55,17 @@ function ThemeToggle() {
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   useEffect(() => {
+    if (!isHome) return;
+
     const observers: IntersectionObserver[] = [];
 
     navItems.forEach(({ href }) => {
       const id = href.split("#")[1];
+      if (!id) return;
       const element = document.getElementById(id);
       if (!element) return;
 
@@ -76,16 +83,28 @@ export default function Navbar() {
     });
 
     return () => observers.forEach((obs) => obs.disconnect());
-  }, []);
+  }, [isHome]);
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    const id = href.split("#")[1];
+    if (isHome && id) {
+      e.preventDefault();
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+    setMobileOpen(false);
+  };
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-surface-border transition-colors">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
-        <a href="/#home" className="flex items-center gap-2 font-mono text-lg font-bold text-text-primary hover:text-primary transition-colors">
+        <Link href="/" className="flex items-center gap-2 font-mono text-lg font-bold text-text-primary hover:text-primary transition-colors">
           <span className="inline-block w-2 h-2 rounded-full bg-status-green" />
           kin.dev
-        </a>
+        </Link>
 
         {/* Desktop nav + theme toggle */}
         <div className="hidden md:flex items-center gap-8">
@@ -94,16 +113,17 @@ export default function Navbar() {
               const id = href.split("#")[1];
               return (
                 <li key={id}>
-                  <a
+                  <Link
                     href={href}
+                    onClick={(e) => handleNavClick(e, href)}
                     className={`font-mono text-sm transition-colors ${
-                      activeSection === id
+                      isHome && activeSection === id
                         ? "text-primary"
                         : "text-text-secondary hover:text-text-primary"
                     }`}
                   >
                     {label}
-                  </a>
+                  </Link>
                 </li>
               );
             })}
@@ -138,17 +158,17 @@ export default function Navbar() {
               const id = href.split("#")[1];
               return (
                 <li key={id}>
-                  <a
+                  <Link
                     href={href}
-                    onClick={() => setMobileOpen(false)}
+                    onClick={(e) => handleNavClick(e, href)}
                     className={`font-mono text-sm transition-colors ${
-                      activeSection === id
+                      isHome && activeSection === id
                         ? "text-primary"
                         : "text-text-secondary hover:text-text-primary"
                     }`}
                   >
                     {label}
-                  </a>
+                  </Link>
                 </li>
               );
             })}
