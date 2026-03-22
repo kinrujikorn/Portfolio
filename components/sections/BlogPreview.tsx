@@ -1,3 +1,4 @@
+import Link from "next/link";
 import SectionReveal from "@/components/ui/SectionReveal";
 import BlogCard from "@/components/ui/BlogCard";
 import { getAllPosts } from "@/lib/blog";
@@ -27,12 +28,12 @@ export default function BlogPreview() {
 
         <SectionReveal delay={0.3}>
           <div className="text-center mt-8">
-            <a
+            <Link
               href="/blog"
               className="font-mono text-sm text-primary hover:text-primary-light transition-colors"
             >
               view_all_posts() &rarr;
-            </a>
+            </Link>
           </div>
         </SectionReveal>
       </div>

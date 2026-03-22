@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { socialLinks } from "@/data/social";
 
 export default function Footer() {
@@ -28,7 +29,7 @@ export default function Footer() {
         <div className="flex gap-6 font-mono text-xs text-text-secondary">
           <a href="#home" className="hover:text-primary transition-colors">Home</a>
           <a href="#projects" className="hover:text-primary transition-colors">Projects</a>
-          <a href="/blog" className="hover:text-primary transition-colors">Blog</a>
+          <Link href="/blog" className="hover:text-primary transition-colors">Blog</Link>
           <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
         </div>
         <p className="font-mono text-text-secondary text-xs">

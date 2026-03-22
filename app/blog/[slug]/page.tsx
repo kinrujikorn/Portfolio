@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import { MDXRemote } from "next-mdx-remote/rsc";
@@ -26,12 +27,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   return (
     <div className="min-h-screen pt-24 pb-20 px-6">
       <article className="max-w-3xl mx-auto">
-        <a
+        <Link
           href="/blog"
           className="font-mono text-sm text-primary hover:text-primary-light transition-colors mb-8 inline-block"
         >
           &larr; back_to_blog()
-        </a>
+        </Link>
 
         <div className="mb-8">
           <h1 className="font-mono text-3xl md:text-4xl font-bold text-text-primary mb-4">
