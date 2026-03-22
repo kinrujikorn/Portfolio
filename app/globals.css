@@ -2,13 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --background: #09090b;
+    --surface: #18181b;
+    --surface-border: #27272a;
+    --primary: #8B5CF6;
+    --primary-light: #A78BFA;
+    --glow: rgba(139, 92, 246, 0.15);
+    --text-primary: #f4f4f5;
+    --text-secondary: #a1a1aa;
+    --status-green: #22c55e;
+    --grid-color: rgba(139, 92, 246, 0.08);
+    --grid-glow: rgba(139, 92, 246, 0.06);
+    --prose-bg: #18181b;
+  }
+
+  [data-theme="light"] {
+    --background: #fafafa;
+    --surface: #ffffff;
+    --surface-border: #e4e4e7;
+    --primary: #7C3AED;
+    --primary-light: #6D28D9;
+    --glow: rgba(124, 58, 237, 0.1);
+    --text-primary: #18181b;
+    --text-secondary: #52525b;
+    --status-green: #16a34a;
+    --grid-color: rgba(124, 58, 237, 0.06);
+    --grid-glow: rgba(124, 58, 237, 0.04);
+    --prose-bg: #f4f4f5;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #09090b;
-  color: #f4f4f5;
+  background-color: var(--background);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 @keyframes bounce-chevron {

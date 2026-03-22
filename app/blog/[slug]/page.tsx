@@ -55,7 +55,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           </div>
         </div>
 
-        <div className="prose prose-invert prose-violet max-w-none
+        <div className="prose max-w-none
           prose-headings:font-mono prose-headings:text-text-primary
           prose-p:text-text-secondary prose-p:leading-relaxed
           prose-a:text-primary prose-a:no-underline hover:prose-a:text-primary-light

@@ -6,17 +6,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#09090b",
-        surface: "#18181b",
-        "surface-border": "#27272a",
-        primary: "#8B5CF6",
-        "primary-light": "#A78BFA",
-        glow: "rgba(139, 92, 246, 0.15)",
-        "text-primary": "#f4f4f5",
-        "text-secondary": "#a1a1aa",
-        "status-green": "#22c55e",
-        "card-bg": "#18181b",
-        "card-border": "#27272a",
+        background: "var(--background)",
+        surface: "var(--surface)",
+        "surface-border": "var(--surface-border)",
+        primary: "var(--primary)",
+        "primary-light": "var(--primary-light)",
+        glow: "var(--glow)",
+        "text-primary": "var(--text-primary)",
+        "text-secondary": "var(--text-secondary)",
+        "status-green": "var(--status-green)",
+        "card-bg": "var(--surface)",
+        "card-border": "var(--surface-border)",
       },
       fontFamily: {
         sans: ["var(--font-inter)", "sans-serif"],

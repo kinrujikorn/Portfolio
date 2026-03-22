@@ -6,8 +6,8 @@ export default function GridBackground() {
         className="absolute inset-0 animate-grid-pulse"
         style={{
           backgroundImage: `
-            linear-gradient(rgba(139, 92, 246, 0.08) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(139, 92, 246, 0.08) 1px, transparent 1px)
+            linear-gradient(var(--grid-color) 1px, transparent 1px),
+            linear-gradient(90deg, var(--grid-color) 1px, transparent 1px)
           `,
           backgroundSize: "60px 60px",
         }}
@@ -16,7 +16,7 @@ export default function GridBackground() {
       <div
         className="absolute inset-0"
         style={{
-          background: "radial-gradient(ellipse at center, rgba(139, 92, 246, 0.06) 0%, transparent 70%)",
+          background: "radial-gradient(ellipse at center, var(--grid-glow) 0%, transparent 70%)",
         }}
       />
     </div>
