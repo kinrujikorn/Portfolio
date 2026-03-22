@@ -27,10 +27,10 @@ export default function Footer() {
           ))}
         </div>
         <div className="flex gap-6 font-mono text-xs text-text-secondary">
-          <a href="#home" className="hover:text-primary transition-colors">Home</a>
-          <a href="#projects" className="hover:text-primary transition-colors">Projects</a>
+          <a href="/#home" className="hover:text-primary transition-colors">Home</a>
+          <a href="/#projects" className="hover:text-primary transition-colors">Projects</a>
           <Link href="/blog" className="hover:text-primary transition-colors">Blog</Link>
-          <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
+          <a href="/#contact" className="hover:text-primary transition-colors">Contact</a>
         </div>
         <p className="font-mono text-text-secondary text-xs">
           &copy; {new Date().getFullYear()} kin.dev &mdash; All rights reserved

@@ -4,13 +4,13 @@ import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 
 const navItems = [
-  { label: "Home", href: "#home" },
-  { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#projects" },
-  { label: "Experience", href: "#experience" },
-  { label: "About", href: "#about" },
-  { label: "Blog", href: "#blog" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/#home" },
+  { label: "Skills", href: "/#skills" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Experience", href: "/#experience" },
+  { label: "About", href: "/#about" },
+  { label: "Blog", href: "/#blog" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 function ThemeToggle() {
@@ -58,7 +58,7 @@ export default function Navbar() {
     const observers: IntersectionObserver[] = [];
 
     navItems.forEach(({ href }) => {
-      const id = href.replace("#", "");
+      const id = href.split("#")[1];
       const element = document.getElementById(id);
       if (!element) return;
 
@@ -82,7 +82,7 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-surface-border transition-colors">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
-        <a href="#home" className="flex items-center gap-2 font-mono text-lg font-bold text-text-primary hover:text-primary transition-colors">
+        <a href="/#home" className="flex items-center gap-2 font-mono text-lg font-bold text-text-primary hover:text-primary transition-colors">
           <span className="inline-block w-2 h-2 rounded-full bg-status-green" />
           kin.dev
         </a>
@@ -91,7 +91,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-8">
           <ul className="flex gap-8">
             {navItems.map(({ label, href }) => {
-              const id = href.replace("#", "");
+              const id = href.split("#")[1];
               return (
                 <li key={id}>
                   <a
@@ -135,7 +135,7 @@ export default function Navbar() {
         <div className="md:hidden border-t border-surface-border bg-background/95 backdrop-blur-md">
           <ul className="flex flex-col px-6 py-4 gap-4">
             {navItems.map(({ label, href }) => {
-              const id = href.replace("#", "");
+              const id = href.split("#")[1];
               return (
                 <li key={id}>
                   <a
