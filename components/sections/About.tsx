@@ -27,23 +27,22 @@ export default function About() {
             <div>
               <p className="text-text-secondary leading-relaxed">
                 Hello, my name is Rujikorn Rujitanont, but you can call me Kin.
-                I am currently 21 years old. My hobbies include learning new
-                things, keeping up with computer trends, playing video games,
-                and making videos. I am particularly interested in website and
-                app development.
+                I&apos;m a Computer Engineering graduate from KMUTT with a 3.68 GPAX
+                (First Class Honors anticipated). I&apos;m passionate about building
+                web and mobile applications that solve real problems.
               </p>
               <p className="text-text-secondary leading-relaxed mt-4">
-                I am a third-year student enrolled in the Computer Engineering
-                International Program at KMUTT. I have experience in
-                process-oriented tasks, am adept at collaborating with others,
-                and I&apos;m committed to continuous self-improvement.
+                I&apos;ve interned at Ant HR (backed by SCG) building AI-powered
+                recruitment tools, and at Huawei Thailand redesigning internal
+                dashboards. I thrive in Agile teams and love turning complex
+                requirements into clean, functional products.
               </p>
 
               {/* Currently */}
               <div className="mt-6 space-y-2 font-mono text-sm">
-                <p><span className="text-primary">currently_learning:</span> <span className="text-text-secondary">&quot;AI &amp; Machine Learning&quot;</span></p>
-                <p><span className="text-primary">currently_building:</span> <span className="text-text-secondary">&quot;This portfolio&quot;</span></p>
-                <p><span className="text-primary">currently_exploring:</span> <span className="text-text-secondary">&quot;Cloud Architecture&quot;</span></p>
+                <p><span className="text-primary">status:</span> <span className="text-text-secondary">&quot;Open to full-time opportunities&quot;</span></p>
+                <p><span className="text-primary">interests:</span> <span className="text-text-secondary">&quot;Full-stack Development, AI/ML, Cloud&quot;</span></p>
+                <p><span className="text-primary">languages:</span> <span className="text-text-secondary">&quot;Thai, English (TOEIC: 730)&quot;</span></p>
               </div>
             </div>
           </GlowCard>

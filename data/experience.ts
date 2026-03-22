@@ -10,38 +10,47 @@ export interface ExperienceEntry {
 export const experiences: ExperienceEntry[] = [
   {
     type: "education",
-    dateRange: "2023 — Present",
-    title: "Computer Engineering (International Program)",
+    dateRange: "Aug 2021 — May 2025",
+    title: "B.Eng. in Computer Engineering",
     organization: "King Mongkut's University of Technology Thonburi (KMUTT)",
     description:
-      "Third-year student specializing in software development, web technologies, and mobile application development. Active participant in university tech projects and hackathons.",
+      "3.68 GPAX, First Class Honors anticipated. Relevant coursework: Software Engineering, Object-Oriented Design, Big Data Engineering, Database Systems, Algorithms, Data Structures.",
     techTags: ["Python", "JavaScript", "React", "Flutter"],
   },
   {
+    type: "work",
+    dateRange: "Aug 2024 — May 2025",
+    title: "Full-stack Developer Intern",
+    organization: "Ant HR Co., Ltd. (Backed by SCG)",
+    description:
+      "Developed core features for job posting, role-based access, and interview scheduling across web and mobile platforms. Built AI-powered resume analysis and job matching system using machine learning techniques. Contributed to UI/UX design, system integration, and database structuring.",
+    techTags: ["React.js", "Node.js", "Flutter", "Redux", "MySQL", "Google Cloud"],
+  },
+  {
+    type: "work",
+    dateRange: "Jun 2024 — Aug 2024",
+    title: "Frontend Developer Intern",
+    organization: "Huawei Technologies (Thailand) Co., Ltd.",
+    description:
+      "Redesigned internal dashboard and booking system to enhance user experience. Built interactive components including dark mode, modal forms, heatmap calendar, and user input validation with error handling. Prepared and structured frontend data for backend communication.",
+    techTags: ["HTML", "CSS", "JavaScript", "Python", "Flask"],
+  },
+  {
     type: "achievement",
-    dateRange: "2024",
+    dateRange: "Feb 2023 — May 2024",
     title: "Wanjaii — Dating App",
-    organization: "University Project",
+    organization: "Software Engineering Project",
     description:
-      "Led the development of a cross-platform dating application with real-time chat and intelligent matching systems.",
-    techTags: ["Flutter", "MySQL"],
+      "Built a real-time swipe-and-chat app with customizable profiles and match filtering. Integrated Firebase for auth, database, storage, and backend connectivity.",
+    techTags: ["Flutter", "Dart", "Firebase", "Express.js"],
   },
   {
     type: "achievement",
-    dateRange: "2024",
-    title: "ServiceX — Technician Queue App",
-    organization: "University Project",
+    dateRange: "Sep 2023 — Dec 2023",
+    title: "ServiceX — Service Booking Platform",
+    organization: "Software Engineering Project",
     description:
-      "Built a full-stack service booking platform connecting users with technicians, featuring real-time queue management.",
-    techTags: ["React Native", "Node.js", "Express.js", "MySQL"],
-  },
-  {
-    type: "achievement",
-    dateRange: "2023",
-    title: "Hotel Management System",
-    organization: "University Project",
-    description:
-      "Developed a comprehensive hotel management website with room reservations, financial tracking, and role-based access control.",
-    techTags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+      "Developed a full-featured service booking platform supporting user registration, authentication, search/filter, and appointment scheduling. Led role-based access and booking flows in a Scrum team of 6.",
+    techTags: ["Node.js", "Express.js", "MySQL"],
   },
 ];

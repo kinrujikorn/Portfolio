@@ -1,4 +1,5 @@
 export const skills = [
-  "c", "python", "dart", "javascript", "php", "html", "css",
-  "react", "nodejs", "expressjs", "flutter", "flask", "mysql", "git",
+  "javascript", "typescript", "python", "dart", "html", "css",
+  "react", "nextjs", "nestjs", "nodejs", "expressjs", "flutter",
+  "mysql", "postgresql", "firebase", "gcp", "figma", "git",
 ];

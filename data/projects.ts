@@ -16,61 +16,42 @@ export interface Project {
 export const projects: Project[] = [
   {
     slug: "wanjaii",
-    title: "Wanjaii Project",
+    title: "Wanjaii",
     description:
-      "A dating app with chat system and search features, built with Flutter and MySQL.",
+      "A real-time swipe-and-chat dating app with customizable profiles and match filtering, built with Flutter and Firebase.",
     longDescription:
-      "We developed a full-featured dating application that includes a real-time chat system for communication and an intelligent search system for finding compatible people. The app features user authentication, profile management, matching algorithms, and push notifications.",
+      "Built a real-time swipe-and-chat app with customizable profiles and match filtering. Integrated Firebase for authentication, database, storage, and backend connectivity. Designed UI and user flows for sign-up, chat, and profile management.",
     image: "/images/wanjaii.png",
     screenshots: ["/images/wanjaii.png"],
-    techStack: ["Flutter", "MySQL"],
+    techStack: ["Flutter", "Dart", "Firebase", "Express.js"],
     techDetails: [
       { name: "Flutter", role: "Cross-platform mobile UI framework" },
-      { name: "MySQL", role: "Relational database for user data and matches" },
+      { name: "Dart", role: "Programming language for Flutter" },
+      { name: "Firebase", role: "Auth, Firestore database, and cloud storage" },
+      { name: "Express.js", role: "Backend API connectivity" },
     ],
-    challenges: "Implementing real-time chat with efficient message delivery and handling concurrent user matching requests while maintaining database performance.",
-    learnings: "Gained deep understanding of Flutter state management, real-time communication patterns, and database optimization for social applications.",
+    challenges: "Implementing real-time swipe mechanics with match filtering and integrating Firebase services (Firestore, Auth, Storage) for seamless authentication and data sync across devices.",
+    learnings: "Gained deep understanding of Flutter state management, Firebase integration patterns, real-time data synchronization, and mobile UI/UX design principles.",
     githubUrl: "https://github.com/kinrujikorn/wanjaii",
     demoUrl: "https://youtu.be/wxxlVmyokk8",
   },
   {
     slug: "servicex",
-    title: "ServiceX Project",
+    title: "ServiceX",
     description:
-      "A technician queue app connecting users with service providers, built with React Native and Node.js.",
+      "A full-featured service booking platform with user registration, authentication, search/filter, and appointment scheduling.",
     longDescription:
-      "ServiceX is an application that facilitates the process of finding technicians or service agencies. Users can browse available technicians, book appointments, track queue status, and rate service quality. The backend handles real-time queue management and notification delivery.",
+      "Developed a full-featured service booking platform supporting user registration, authentication, search/filter, and appointment scheduling. Led the implementation of role-based access and booking flows across both provider and seeker user types with clean UI/UX and secure data handling. Collaborated in a Scrum team of 6 to design system architecture, manage sprints, and deliver production-ready features.",
     image: "/images/servicex.png",
     screenshots: ["/images/servicex.png"],
-    techStack: ["React Native", "Node.js", "Express.js", "MySQL"],
+    techStack: ["Node.js", "Express.js", "MySQL"],
     techDetails: [
-      { name: "React Native", role: "Cross-platform mobile frontend" },
       { name: "Node.js", role: "Server-side runtime environment" },
       { name: "Express.js", role: "REST API framework" },
       { name: "MySQL", role: "Database for users, bookings, and queue data" },
     ],
-    challenges: "Building a responsive queue management system that updates in real-time across multiple clients while handling edge cases like cancellations and rescheduling.",
-    learnings: "Learned full-stack mobile development with React Native, RESTful API design, and real-time state synchronization between client and server.",
+    challenges: "Building role-based access control for provider and seeker user types while maintaining clean booking flows, secure data handling, and Scrum-based delivery in a team of 6.",
+    learnings: "Learned Agile/Scrum development practices, system architecture design, RESTful API development, and Git-based version control in a collaborative team environment.",
     githubUrl: "https://github.com/kinrujikorn/ServiceX",
-  },
-  {
-    slug: "hotelmanagement",
-    title: "Hotel Management Project",
-    description:
-      "A hotel management system with room reservations, financial tracking, and data management.",
-    longDescription:
-      "A comprehensive hotel management website featuring room reservation systems, financial tracking dashboards, and various data entry systems for hotel operations. The system supports multiple user roles (admin, staff, guest) with appropriate access controls and reporting capabilities.",
-    image: "/images/hotelmanagement.png",
-    screenshots: ["/images/hotelmanagement.png"],
-    techStack: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-    techDetails: [
-      { name: "HTML/CSS", role: "Frontend structure and styling" },
-      { name: "JavaScript", role: "Client-side interactivity and validation" },
-      { name: "PHP", role: "Server-side logic and API endpoints" },
-      { name: "MySQL", role: "Database for reservations, finances, and guests" },
-    ],
-    challenges: "Designing a flexible reservation system that handles overlapping bookings, room availability calculations, and financial reporting across different time periods.",
-    learnings: "Gained experience with traditional web development stack, database schema design for complex business logic, and role-based access control implementation.",
-    githubUrl: "https://github.com/kinrujikorn/The-Saturn-Hotel-Management",
   },
 ];

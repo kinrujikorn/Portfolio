@@ -17,10 +17,10 @@ export default function Skills() {
         <SectionReveal delay={0.1}>
           <GlowCard className="flex justify-center">
             <Image
-              src={`https://skillicons.dev/icons?i=${skills.join(",")}&perline=7`}
-              alt="Skills: C, Python, Dart, JavaScript, PHP, HTML, CSS, React, Node.js, Express.js, Flutter, Flask, MySQL, Git"
+              src={`https://skillicons.dev/icons?i=${skills.join(",")}&perline=9`}
+              alt="Skills: JavaScript, TypeScript, Python, Dart, HTML, CSS, React, Next.js, NestJS, Node.js, Express.js, Flutter, MySQL, PostgreSQL, Firebase, GCP, Figma, Git"
               width={490}
-              height={140}
+              height={180}
               unoptimized
             />
           </GlowCard>
