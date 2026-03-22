@@ -1,0 +1,56 @@
+---
+title: "Building an AI-Powered Resume Matcher"
+date: "2025-02-15"
+excerpt: "How I built a resume analysis and job matching system using TF-IDF and BERT during my internship at Ant HR."
+tags: ["ai", "machine-learning", "internship"]
+---
+
+# Building an AI-Powered Resume Matcher
+
+During my internship at **Ant HR** (backed by SCG), one of the most interesting challenges I worked on was building an AI-powered resume analysis and job matching system. Here's what I learned.
+
+## The Problem
+
+Recruiters spend hours manually reading resumes and matching them to job postings. We needed a system that could:
+
+- Parse and understand resume content
+- Extract key skills, experience, and qualifications
+- Match candidates to relevant job postings automatically
+- Rank matches by relevance
+
+## The Approach
+
+We used a two-stage matching pipeline:
+
+### Stage 1: TF-IDF for Quick Filtering
+
+```python
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+
+vectorizer = TfidfVectorizer(stop_words='english', max_features=5000)
+tfidf_matrix = vectorizer.fit_transform(documents)
+similarity = cosine_similarity(resume_vector, job_vectors)
+```
+
+TF-IDF gave us fast, keyword-based matching to narrow down candidates. It's simple but effective for an initial filter.
+
+### Stage 2: BERT for Semantic Understanding
+
+For the top candidates from Stage 1, we used BERT embeddings to capture semantic meaning — understanding that "React developer" and "frontend engineer" are related, even without shared keywords.
+
+## Key Takeaways
+
+1. **Start simple** — TF-IDF handled 80% of cases well enough
+2. **Hybrid approaches win** — combining keyword and semantic matching gave the best results
+3. **Domain matters** — fine-tuning on job-related text significantly improved accuracy
+4. **User feedback loops** — recruiter feedback on match quality helped us iterate quickly
+
+## Tools Used
+
+- **React.js** and **Flutter** for the frontend
+- **Node.js** for the API layer
+- **Google Cloud** for model hosting
+- **MySQL** for structured data
+
+This project taught me that AI in production is less about the model and more about the pipeline — data cleaning, feature engineering, and integration matter just as much as the algorithm itself.

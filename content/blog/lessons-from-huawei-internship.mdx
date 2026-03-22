@@ -1,0 +1,54 @@
+---
+title: "What I Learned Redesigning Dashboards at Huawei"
+date: "2024-09-10"
+excerpt: "Lessons from my frontend internship at Huawei Thailand — dark mode, heatmaps, and building for real users."
+tags: ["internship", "frontend", "ux"]
+---
+
+# What I Learned Redesigning Dashboards at Huawei
+
+In summer 2024, I interned at **Huawei Technologies (Thailand)** as a Frontend Developer. My main project was redesigning an internal dashboard and booking system. Here are the key lessons.
+
+## Building for Internal Users is Different
+
+Internal tools often get neglected in terms of UX. But the people using these tools spend 8+ hours a day on them. Small improvements compound into massive productivity gains.
+
+## Features I Built
+
+### Dark Mode
+
+Not just a color swap — I learned about:
+
+- CSS custom properties for theme tokens
+- Persisting user preference in localStorage
+- Handling system preference detection
+- Testing contrast ratios for accessibility
+
+### Heatmap Calendar
+
+A visual representation of booking density across time slots. The challenge was rendering large datasets without janking the UI.
+
+### Form Validation
+
+Building modal forms with real-time validation taught me to think about:
+
+- Error states and messaging
+- Debouncing input validation
+- Accessible error announcements
+
+## Technical Growth
+
+Working with **Flask** on the backend (simulating API logic) showed me how frontend and backend teams need to agree on contracts early. We used Excel spreadsheets to define API shapes before the backend was ready — not ideal, but it worked.
+
+## The Biggest Lesson
+
+> Ship something usable first, then iterate. Perfect is the enemy of deployed.
+
+My first version of the dashboard was overengineered. My mentor told me to strip it back and focus on the three things users actually needed. That advice stuck with me.
+
+## Tools
+
+- HTML, CSS, JavaScript for the frontend
+- Python + Flask for backend simulation
+- Figma for design mockups
+- Excel for data structuring
