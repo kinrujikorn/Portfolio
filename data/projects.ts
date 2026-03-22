@@ -54,4 +54,24 @@ export const projects: Project[] = [
     learnings: "Learned Agile/Scrum development practices, system architecture design, RESTful API development, and Git-based version control in a collaborative team environment.",
     githubUrl: "https://github.com/kinrujikorn/ServiceX",
   },
+  {
+    slug: "hotelmanagement",
+    title: "Hotel Management",
+    description:
+      "A hotel management system with room reservations, financial tracking, and role-based access control.",
+    longDescription:
+      "A comprehensive hotel management website featuring room reservation systems, financial tracking dashboards, and various data entry systems for hotel operations. The system supports multiple user roles (admin, staff, guest) with appropriate access controls and reporting capabilities.",
+    image: "/images/hotelmanagement.png",
+    screenshots: ["/images/hotelmanagement.png"],
+    techStack: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+    techDetails: [
+      { name: "HTML/CSS", role: "Frontend structure and styling" },
+      { name: "JavaScript", role: "Client-side interactivity and validation" },
+      { name: "PHP", role: "Server-side logic and API endpoints" },
+      { name: "MySQL", role: "Database for reservations, finances, and guests" },
+    ],
+    challenges: "Designing a flexible reservation system that handles overlapping bookings, room availability calculations, and financial reporting across different time periods.",
+    learnings: "Gained experience with traditional web development stack, database schema design for complex business logic, and role-based access control implementation.",
+    githubUrl: "https://github.com/kinrujikorn/The-Saturn-Hotel-Management",
+  },
 ];
