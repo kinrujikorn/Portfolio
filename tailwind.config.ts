@@ -5,19 +5,25 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#0a0a0f",
-        "primary-blue": "#00a2ff",
-        "secondary-blue": "#0066cc",
-        "glow-blue": "rgba(0, 162, 255, 0.2)",
-        "card-bg": "#111827",
-        "card-border": "#1e293b",
+        background: "#09090b",
+        surface: "#18181b",
+        "surface-border": "#27272a",
+        primary: "#8B5CF6",
+        "primary-light": "#A78BFA",
+        glow: "rgba(139, 92, 246, 0.15)",
+        "text-primary": "#f4f4f5",
+        "text-secondary": "#a1a1aa",
+        "status-green": "#22c55e",
+        "card-bg": "#18181b",
+        "card-border": "#27272a",
       },
       fontFamily: {
         sans: ["var(--font-inter)", "sans-serif"],
+        mono: ["var(--font-jetbrains)", "monospace"],
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
 
 export default config;
