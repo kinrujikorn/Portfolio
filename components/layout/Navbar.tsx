@@ -6,7 +6,9 @@ const navItems = [
   { label: "Home", href: "#home" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
+  { label: "Experience", href: "#experience" },
   { label: "About", href: "#about" },
+  { label: "Blog", href: "#blog" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -39,15 +41,16 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-card-border">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-surface-border">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="#home" className="text-xl font-bold text-white hover:text-primary-blue transition-colors">
-          Kin
+        <a href="#home" className="flex items-center gap-2 font-mono text-lg font-bold text-text-primary hover:text-primary transition-colors">
+          <span className="inline-block w-2 h-2 rounded-full bg-status-green" />
+          kin.dev
         </a>
 
         {/* Mobile hamburger button */}
         <button
-          className="md:hidden text-white"
+          className="md:hidden text-text-primary"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
@@ -68,10 +71,10 @@ export default function Navbar() {
               <li key={id}>
                 <a
                   href={href}
-                  className={`text-sm font-medium transition-colors ${
+                  className={`font-mono text-sm transition-colors ${
                     activeSection === id
-                      ? "text-primary-blue"
-                      : "text-slate-400 hover:text-white"
+                      ? "text-primary"
+                      : "text-text-secondary hover:text-text-primary"
                   }`}
                 >
                   {label}
@@ -84,7 +87,7 @@ export default function Navbar() {
 
       {/* Mobile nav dropdown */}
       {mobileOpen && (
-        <div className="md:hidden border-t border-card-border bg-background/95 backdrop-blur-md">
+        <div className="md:hidden border-t border-surface-border bg-background/95 backdrop-blur-md">
           <ul className="flex flex-col px-6 py-4 gap-4">
             {navItems.map(({ label, href }) => {
               const id = href.replace("#", "");
@@ -93,10 +96,10 @@ export default function Navbar() {
                   <a
                     href={href}
                     onClick={() => setMobileOpen(false)}
-                    className={`text-sm font-medium transition-colors ${
+                    className={`font-mono text-sm transition-colors ${
                       activeSection === id
-                        ? "text-primary-blue"
-                        : "text-slate-400 hover:text-white"
+                        ? "text-primary"
+                        : "text-text-secondary hover:text-text-primary"
                     }`}
                   >
                     {label}
