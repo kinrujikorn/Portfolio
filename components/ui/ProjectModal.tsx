@@ -34,7 +34,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/85"
           onClick={onClose}
           role="dialog"
           aria-modal="true"
@@ -44,7 +44,8 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            transition={{ duration: 0.2 }}
+            transition={{ duration: 0.15 }}
+            style={{ willChange: "transform, opacity" }}
             className="bg-surface border border-surface-border rounded-xl max-w-3xl w-full max-h-[90vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
@@ -72,6 +73,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                   width={800}
                   height={400}
                   className="w-full h-auto object-cover"
+                  priority
                 />
               </div>
 

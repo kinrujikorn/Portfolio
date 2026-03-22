@@ -9,6 +9,15 @@ export interface ExperienceEntry {
 
 export const experiences: ExperienceEntry[] = [
   {
+    type: "work",
+    dateRange: "Mar 2026 — Present",
+    title: "Full-stack Developer",
+    organization: "Gofive Co., Ltd.",
+    description:
+      "Working as a full-stack developer, building and maintaining web applications and services for the company's products.",
+    techTags: [],
+  },
+  {
     type: "education",
     dateRange: "Aug 2021 — May 2025",
     title: "B.Eng. in Computer Engineering",

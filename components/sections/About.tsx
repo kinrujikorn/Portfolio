@@ -34,15 +34,16 @@ export default function About() {
               <p className="text-text-secondary leading-relaxed text-[15px]">
                 Hello, my name is Rujikorn Rujitanont, but you can call me Kin.
                 I&apos;m a Computer Engineering graduate from KMUTT with a 3.68 GPAX
-                (First Class Honors anticipated). I&apos;m passionate about building
-                web and mobile applications that solve real problems.
+                (First Class Honors). Currently working as a Full-stack Developer
+                at Gofive. I&apos;m passionate about building web and mobile
+                applications that solve real problems.
               </p>
 
               {/* Status cards */}
               <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <div className="p-4 rounded-xl border border-surface-border bg-surface/40">
                   <p className="font-mono text-[10px] text-primary uppercase tracking-[0.2em] mb-1">Status</p>
-                  <p className="text-sm text-text-primary font-medium">Open to work</p>
+                  <p className="text-sm text-text-primary font-medium">Full-stack @ Gofive</p>
                 </div>
                 <div className="p-4 rounded-xl border border-surface-border bg-surface/40">
                   <p className="font-mono text-[10px] text-primary uppercase tracking-[0.2em] mb-1">Focus</p>
