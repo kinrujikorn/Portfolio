@@ -8,10 +8,10 @@ export default function Skills() {
     <section id="skills" className="py-20 px-6">
       <div className="max-w-4xl mx-auto">
         <SectionReveal>
-          <h2 className="text-3xl font-semibold text-white text-center mb-2">
-            My Skills
+          <h2 className="font-mono text-3xl font-semibold text-text-primary text-center mb-2">
+            <span className="text-primary">&gt;_</span> skills
           </h2>
-          <div className="w-16 h-1 bg-primary-blue mx-auto mb-12 rounded-full" />
+          <div className="w-16 h-1 bg-primary mx-auto mb-12 rounded-full" />
         </SectionReveal>
 
         <SectionReveal delay={0.1}>

@@ -3,9 +3,9 @@ import { socialLinks } from "@/data/social";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-card-border py-8">
+    <footer className="border-t border-surface-border py-8">
       <div className="max-w-6xl mx-auto px-6 flex flex-col items-center gap-4">
-        <div className="flex gap-4">
+        <div className="flex gap-6">
           {socialLinks.map((link) => (
             <a
               key={link.platform}
@@ -20,13 +20,19 @@ export default function Footer() {
                 alt={link.platform}
                 width={36}
                 height={36}
-                className="rounded-full hover:shadow-[0_0_12px_rgba(0,162,255,0.4)] transition-shadow"
+                className="rounded-full hover:shadow-[0_0_12px_rgba(139,92,246,0.4)] transition-shadow"
               />
             </a>
           ))}
         </div>
-        <p className="text-slate-400 text-sm">
-          kinrujikorn &mdash; All rights reserved
+        <div className="flex gap-6 font-mono text-xs text-text-secondary">
+          <a href="#home" className="hover:text-primary transition-colors">Home</a>
+          <a href="#projects" className="hover:text-primary transition-colors">Projects</a>
+          <a href="/blog" className="hover:text-primary transition-colors">Blog</a>
+          <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
+        </div>
+        <p className="font-mono text-text-secondary text-xs">
+          &copy; {new Date().getFullYear()} kin.dev &mdash; All rights reserved
         </p>
       </div>
     </footer>
