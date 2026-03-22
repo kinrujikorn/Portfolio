@@ -10,8 +10,6 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
-    "@tsparticles/react": "^3.0.0",
-    "@tsparticles/slim": "^3.9.1",
     "framer-motion": "^12.38.0",
     "gray-matter": "^4.0.3",
     "next": "16.2.1",
