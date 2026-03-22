@@ -31,12 +31,6 @@ export default function About() {
                 (First Class Honors anticipated). I&apos;m passionate about building
                 web and mobile applications that solve real problems.
               </p>
-              <p className="text-text-secondary leading-relaxed mt-4">
-                I&apos;ve interned at Ant HR (backed by SCG) building AI-powered
-                recruitment tools, and at Huawei Thailand redesigning internal
-                dashboards. I thrive in Agile teams and love turning complex
-                requirements into clean, functional products.
-              </p>
 
               {/* Currently */}
               <div className="mt-6 space-y-2 font-mono text-sm">
